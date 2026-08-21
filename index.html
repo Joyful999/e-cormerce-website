@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXORA — Elevated Shopping. Exceptional Products.</title>
+<meta name="description" content="LUXORA is a premium online marketplace for modern lifestyles — curated electronics, fashion, beauty, home and more.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+<div id="headerMount"></div>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">Spring / Summer Edit</span>
+      <h1 class="hero-title">Discover<br>what's <em>next</em>.</h1>
+      <p class="hero-sub">Explore products selected for modern lifestyles — from everyday essentials to considered luxury.</p>
+      <div class="hero-cta">
+        <a href="shop.html" class="btn btn-primary">Shop Now</a>
+        <a href="shop.html#categories" class="btn btn-outline">Explore Collection</a>
+      </div>
+    </div>
+    <div class="hero-media reveal" style="animation-delay:.1s;">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=80" alt="Featured LUXORA product styling" loading="lazy">
+      <div class="hero-float"><span class="stars" style="font-size:16px;">★★★★★</span><span style="font-size:13px;font-weight:600;">Loved by 12,000+ shoppers</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">Browse</span><h2 class="section-title">Shop by Category</h2></div>
+      <a href="shop.html" class="btn btn-ghost">View all →</a>
+    </div>
+    <div class="grid-categories" id="categoryGrid"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--surface);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">Curated</span><h2 class="section-title">Featured Products</h2></div>
+      <a href="shop.html" class="btn btn-ghost">Shop all →</a>
+    </div>
+    <div class="grid-products" id="featuredGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">Ends soon</span><h2 class="section-title">Limited-Time Deals</h2></div>
+      <div class="countdown-row" id="dealCountdown"></div>
+    </div>
+    <div class="grid-products" id="dealsGrid"></div>
+    <p style="font-size:11px;color:var(--ink-soft);margin-top:16px;">*Countdown is a demo feature for presentation purposes and is not connected to a live promotion.</p>
+  </div>
+</section>
+
+<section class="section" style="display:none;">
+  <div class="wrap">
+    <div class="section-head"><div><span class="eyebrow">Continue where you left off</span><h2 class="section-title">Recently Viewed</h2></div></div>
+    <div class="grid-products" id="homeRecentWrap" style="grid-template-columns:repeat(6,1fr);"></div>
+  </div>
+</section>
+
+<div id="footerMount"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/state.js"></script>
+<script src="js/components.js"></script>
+<script src="js/app.js"></script>
+<script src="js/search.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/account.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

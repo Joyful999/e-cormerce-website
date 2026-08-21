@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — LUXORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="account">
+
+<div id="headerMount"></div>
+
+<section class="section" style="padding-top:48px;">
+  <div class="wrap">
+    <span class="eyebrow">Account</span>
+    <h1 class="section-title" style="margin:8px 0 8px;">Hi, <span id="accountUserName">Guest Shopper</span></h1>
+    <p style="color:var(--ink-soft);margin-bottom:40px;">Manage your orders, wishlist, addresses and profile settings.</p>
+
+    <div class="account-layout">
+      <nav class="account-nav">
+        <a href="#" class="active" data-panel="panel-overview">Overview</a>
+        <a href="#" data-panel="panel-orders">Orders</a>
+        <a href="#" data-panel="panel-wishlist">Wishlist</a>
+        <a href="#" data-panel="panel-addresses">Addresses</a>
+        <a href="#" data-panel="panel-profile">Profile</a>
+        <a href="#" data-panel="panel-settings">Settings</a>
+      </nav>
+
+      <div>
+        <div class="account-panel" id="panel-overview">
+          <div class="stat-grid" id="accountStats"></div>
+          <h3 style="margin-bottom:18px;">Recent Orders</h3>
+          <div id="accountRecentOrders"></div>
+        </div>
+
+        <div class="account-panel" id="panel-orders" style="display:none;">
+          <h3 style="margin-bottom:18px;">All Orders</h3>
+          <div id="accountOrdersMount"></div>
+        </div>
+
+        <div class="account-panel" id="panel-wishlist" style="display:none;">
+          <h3 style="margin-bottom:18px;">Your Wishlist</h3>
+          <div id="accountWishlistMount"></div>
+        </div>
+
+        <div class="account-panel" id="panel-addresses" style="display:none;">
+          <h3 style="margin-bottom:18px;">Shipping Address</h3>
+          <form id="addressForm" class="card-surface" style="padding:26px;max-width:520px;">
+            <div class="field"><label>Address</label><input name="address"></div>
+            <div class="field-row">
+              <div class="field"><label>City</label><input name="city"></div>
+              <div class="field"><label>State</label><input name="state"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Country</label><input name="country"></div>
+              <div class="field"><label>Postal Code</label><input name="postal"></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Save Address</button>
+          </form>
+        </div>
+
+        <div class="account-panel" id="panel-profile" style="display:none;">
+          <h3 style="margin-bottom:18px;">Profile</h3>
+          <form id="profileForm" class="card-surface" style="padding:26px;max-width:520px;">
+            <div class="field"><label>Full Name</label><input name="name"></div>
+            <div class="field"><label>Email</label><input name="email" type="email"></div>
+            <div class="field"><label>Phone</label><input name="phone"></div>
+            <button class="btn btn-primary" type="submit">Save Changes</button>
+          </form>
+        </div>
+
+        <div class="account-panel" id="panel-settings" style="display:none;">
+          <h3 style="margin-bottom:18px;">Settings</h3>
+          <div class="card-surface" style="padding:26px;max-width:520px;">
+            <p style="font-size:13px;color:var(--ink-soft);margin-bottom:18px;">This is a frontend-only demo account. No real credentials are stored or transmitted — data lives only in this browser's local storage.</p>
+            <button class="btn btn-outline" id="logoutBtn">Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footerMount"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/state.js"></script>
+<script src="js/components.js"></script>
+<script src="js/app.js"></script>
+<script src="js/search.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/account.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('logoutBtn')?.addEventListener('click', () => {
+      State.logout();
+      Components.toast('Signed out');
+      setTimeout(() => window.location.href = 'index.html', 500);
+    });
+  });
+</script>
+</body>
+</html>

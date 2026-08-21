@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — LUXORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="register">
+
+<div id="headerMount"></div>
+
+<section class="section">
+  <div class="wrap auth-wrap">
+    <div class="auth-tabs">
+      <a href="login.html">Sign In</a>
+      <a href="register.html" class="active">Register</a>
+    </div>
+    <form id="registerForm" novalidate>
+      <div class="field">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Jordan Reyes">
+        <span class="field-error">Please enter your name</span>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com">
+        <span class="field-error">Enter a valid email address</span>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="••••••••">
+        <span class="field-error">Password must be at least 4 characters</span>
+      </div>
+      <div class="field">
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" placeholder="••••••••">
+        <span class="field-error">Passwords do not match</span>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Create Account</button>
+    </form>
+    <p class="auth-note">Frontend-only demo. Never enter a real password here — nothing is encrypted or transmitted to a server.</p>
+  </div>
+</section>
+
+<div id="footerMount"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/state.js"></script>
+<script src="js/components.js"></script>
+<script src="js/app.js"></script>
+<script src="js/search.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/checkout.js"></script>
+<script src="js/account.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

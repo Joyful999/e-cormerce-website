@@ -1,0 +1,60 @@
+@media (max-width: 1180px){
+  .grid-products{ grid-template-columns: repeat(3,1fr); }
+  .grid-categories{ grid-template-columns: repeat(3,1fr); }
+  .footer-top{ grid-template-columns: 1fr 1fr 1fr; }
+  .search-results-grid{ grid-template-columns: repeat(3,1fr); }
+}
+
+@media (max-width: 900px){
+  .wrap{ padding: 0 20px; }
+  .main-nav{ display:none; }
+  .hamburger{ display:flex; }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-title{ font-size: 42px; }
+  .hero-media{ order:-1; aspect-ratio: 4/3; }
+  .pd-grid{ grid-template-columns: 1fr; gap:30px; }
+  .shop-layout{ grid-template-columns: 1fr; }
+  .filters-panel{ display:none; }
+  .mobile-filter-btn{ display:inline-flex; }
+  .checkout-grid{ grid-template-columns: 1fr; }
+  .account-layout{ grid-template-columns: 1fr; }
+  .footer-top{ grid-template-columns: 1fr 1fr; gap:30px; }
+  .stat-grid{ grid-template-columns: repeat(2,1fr); }
+  .grid-categories{ grid-template-columns: repeat(2,1fr); }
+  .qv-grid{ grid-template-columns: 1fr; }
+  .compare-table{ font-size:11px; }
+  .cart-table thead{ display:none; }
+  .cart-row td{ display:block; padding: 6px 0; }
+  .cart-row{ display:block; padding: 16px 0; }
+}
+
+@media (max-width: 640px){
+  .grid-products{ grid-template-columns: repeat(2,1fr); gap:14px; }
+  .section{ padding: 56px 0; }
+  .section-title{ font-size: 26px; }
+  .hero-title{ font-size: 34px; }
+  .footer-top{ grid-template-columns: 1fr; }
+  .search-results-grid{ grid-template-columns: repeat(2,1fr); }
+  .drawer{ width: 100%; }
+  .modal{ width: 94vw; }
+  .field-row{ grid-template-columns: 1fr; }
+  .stat-grid{ grid-template-columns: 1fr 1fr; }
+  .checkout-steps{ gap:0; }
+  .cstep-label{ display:none; }
+  .cstep{ padding: 0 10px; }
+  .cstep:not(:last-child)::after{ width:24px; }
+  .error-404 .code{ font-size: 90px; }
+}
+
+@media (min-width: 901px){
+  .mobile-filter-btn{ display:none !important; }
+}
+
+.sticky-mobile-cart{ display:none; }
+@media (max-width: 640px){
+  .sticky-mobile-cart{
+    display:flex; position: fixed; bottom:0; left:0; right:0; z-index: 700;
+    background: var(--surface); border-top:1px solid var(--stone); padding: 12px 16px;
+    align-items:center; justify-content:space-between; box-shadow: var(--shadow-lg);
+  }
+}
