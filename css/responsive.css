@@ -7,6 +7,7 @@
 
 @media (max-width: 900px){
   .wrap{ padding: 0 20px; }
+  .search-overlay{ width:calc(100vw - 32px); }
   .main-nav{ display:none; }
   .hamburger{ display:flex; }
   .hero-grid{ grid-template-columns: 1fr; }

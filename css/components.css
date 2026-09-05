@@ -55,8 +55,8 @@
 .qv-media img{ width:100%; height:100%; object-fit:cover; }
 
 /* ---------- Search overlay ---------- */
-.search-overlay{ position: fixed; inset:0; background: var(--paper); z-index: 1100; opacity:0; pointer-events:none; transition: opacity .3s var(--ease); overflow-y:auto; }
-.search-overlay.open{ opacity:1; pointer-events:auto; }
+.search-overlay{ position:fixed; top:calc(var(--header-h) + 12px); left:50%; width:min(720px, calc(100vw - 48px)); max-height:calc(100vh - var(--header-h) - 36px); transform:translateX(-50%) translateY(-8px); background:var(--paper); border:1px solid var(--stone); border-radius:var(--radius-md); box-shadow:var(--shadow-lg); z-index:1100; opacity:0; pointer-events:none; transition:opacity .3s var(--ease), transform .3s var(--ease); overflow-y:auto; }
+.search-overlay.open{ opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
 .search-top{ border-bottom:1px solid var(--stone); padding: 22px 0; position:sticky; top:0; background:var(--paper); z-index:2; }
 .search-input-row{ display:flex; align-items:center; gap:16px; }
 .search-input-row input{ flex:1; border:none; background:transparent; font-family: var(--font-display); font-size: 32px; color: var(--ink); }
